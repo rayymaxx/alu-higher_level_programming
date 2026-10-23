@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-from sys import argv
-
 
 if __name__ == "__main__":
-    newsum = 0
-    if len(argv) > 1:
-        for i in range(1, len(argv)):
-            newsum += int(argv[i])
-    print(newsum)
+    """Print all names defined by hidden_4 module."""
+    import hidden_4
+
+    names = dir(hidden_4)
+    for name in names:
+        if name[:2] != "__":
+            print(name)
