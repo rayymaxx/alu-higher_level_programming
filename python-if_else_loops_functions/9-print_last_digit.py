@@ -2,4 +2,8 @@
 
 
 def print_last_digit(number):
-    print("{}".format(number[-1]) end="")
+    if number < 0:
+        number *= -1
+    result = number % 10
+    print('{}'.format(result), end="")
+    return result
